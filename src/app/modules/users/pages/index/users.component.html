@@ -1,11 +1,14 @@
-<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
-    <div class="mb-3">
-        <label>Email</label>
-        <input type="email" class="form-control" formControlName="email">
-    </div>
-    <div class="mb-3">
-        <label>Password</label>
-        <input type="password" class="form-control" formControlName="password">
-    </div>
-    <input type="submit" value="Enviar" class="btn btn-info">
-</form>
+<h4>Iniciar sesion</h4>
+<div class="container-fluid">
+    <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+            <label>Email</label>
+            <input type="email" class="form-control" formControlName="email">
+        </div>
+        <div class="mb-3">
+            <label>Password</label>
+            <input type="password" class="form-control" formControlName="password">
+        </div>
+        <input type="submit" value="Enviar" class="btn btn-info">
+    </form>
+</div>
