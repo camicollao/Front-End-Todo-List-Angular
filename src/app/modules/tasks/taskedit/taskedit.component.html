@@ -1,0 +1,8 @@
+<div class="container-fluid">
+    <h5>Editar tarea</h5>
+    <form [formGroup]="formulario2"  (ngSubmit)="saveTask(task.id)">
+        <tr>Nombre: <input value="{{task.name}}" formControlName="name"></tr>
+        <tr>Estado: <input value="{{task.done}}" formControlName="done"></tr>
+        <input type="submit" value="Enviar" class="btn btn-primary">
+    </form>
+</div>
