@@ -1,0 +1,16 @@
+h4{
+    text-align: center;
+    margin: auto;
+}
+.container-fluid{
+    background-color: #A5D7E8;
+    width:90%; 
+    margin:auto;
+    padding-bottom: 1000px;
+    padding-top: 10px;
+}
+.container{
+    width: 80%;
+    background-color: white;
+    margin: auto;
+}

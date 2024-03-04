@@ -1,7 +1,16 @@
-h5{
+h2{
     text-align: center;
     padding-top: 20px;
 }
-table{
-    margin: 100px;
+.container-fluid{
+    background-color: #A5D7E8;
+    padding-top: 10px;
+    width:90%; 
+    padding-bottom: 1000px;
+}
+.container{
+    width:90%; 
+    background-color:#fff; 
+    margin:auto;
+    padding-bottom: 100px;
 }
