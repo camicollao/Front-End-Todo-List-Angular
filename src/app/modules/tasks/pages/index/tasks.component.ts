@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {TasksService} from '../../services/tasks.service'
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-tasks',
@@ -28,12 +29,28 @@ export class TasksComponent implements OnInit{
   }
 
   getTaskdel(taskId: string){
-    this.tasksService.getDeleteTask(taskId).subscribe(() =>{
-      this.tasksService.getTasks().subscribe((tasks) =>{
-        this.tasks = tasks
-      })
-      console.log('la tarea ha sido eliminada')
+    Swal.fire({
+      title: "¿Estas seguro de eliminar esta tarea?",
+      text: "Una vez que lo elimines, no podrás recuperar esta tarea!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Eliminar"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.tasksService.getDeleteTask(taskId).subscribe(() =>{
+          this.tasksService.getTasks().subscribe((tasks) =>{
+            this.tasks = tasks
+          })
+        });
+        Swal.fire({
+          title: "La tarea ha sido eliminada",
+          icon: "success"
+        });
+      }
     });
+
   }
 
 

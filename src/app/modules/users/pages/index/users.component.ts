@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import {UsersService} from '../../services/users.service'
 import { Router } from '@angular/router'; 
-
+import Swal from 'sweetalert2';
 //investigar peticiones con id 
 //listar tasks y por id
 
@@ -26,7 +26,14 @@ export class UsersComponent {
     this.usersService.login(this.formulario.value).subscribe(response => {
       localStorage.setItem('access_token', response.access_token);
       this.router.navigate(['/tasks'])
-    })
+    }, (error) => {
+      Swal.fire({
+        icon: "error",
+        title: "Tus datos son incorrectos",
+        text: "Tu correo o contraseña son incorrectos, intentado de nuevo.",
+      });
+    
+    });
   }
   private(){
     this.usersService.private().subscribe((response => {

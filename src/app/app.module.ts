@@ -7,10 +7,13 @@ import { AppComponent } from './app.component';
 import { TasksModule } from './modules/tasks/tasks.module';
 import { UsersModule } from './modules/users/users.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BarModule } from './modules/bar/bar.module';
+import { HomeComponent } from './modules/home/home.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -18,7 +21,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     TasksModule,
     UsersModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

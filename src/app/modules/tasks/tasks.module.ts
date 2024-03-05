@@ -14,8 +14,7 @@ import { TaskeditComponent } from './taskedit/taskedit.component';
     TasksComponent,
     ButtondetailsComponent,
     TaskdetailsComponent,
-    TaskeditComponent
-  ],
+    TaskeditComponent,  ],
   imports: [
     CommonModule,
     TasksRoutingModule,

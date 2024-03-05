@@ -17,7 +17,11 @@
             <tr>
                 <td>{{task.id}}</td>
                 <td>{{task.name}}</td>
-                <td [ngClass]="task.done ? 'text-success' : 'text-danger' ">{{task.done}}</td>
+                @if (task.done == true) {
+                    <td [ngClass]="task.done ? 'text-success' : 'text-danger' ">En Proceso</td>
+                }@else {
+                    <td [ngClass]="task.done ? 'text-success' : 'text-danger' ">Terminado</td>
+                }
                 <td><button type="button" (click)="loadTaskDetails(task.id)" class="btn btn-primary">Detalles</button></td>
                 <td><button type="button"(click)="loadTaskEdit(task.id)" class="btn btn-primary">Editar</button></td>
                 <td><button type="button" (click)="getTaskdel(task.id)" class="btn btn-primary">Eliminar</button></td>
@@ -25,7 +29,7 @@
             </tr>
         </tbody>
         }@empty {
-            <li>There are no tasks.</li>
+            <h3>There are no tasks.</h3>
         }
         </table>
     </div>
