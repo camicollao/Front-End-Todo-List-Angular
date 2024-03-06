@@ -1,0 +1,20 @@
+h4{
+    text-align: center;
+    margin: auto;
+}
+form{
+    margin: auto;
+    width: 30%;
+    padding: 50px;
+    border-radius: 10px;
+    background-color:#fff; 
+}
+.container-fluid{
+    background-color: #A5D7E8;
+    width:90%; 
+    margin:auto;
+    padding-bottom: 1000px;
+}
+.container{
+    padding-top: 100px;
+}

@@ -9,11 +9,11 @@ import { UsersModule } from './modules/users/users.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BarModule } from './modules/bar/bar.module';
 import { HomeComponent } from './modules/home/home.component';
+import { HomeModule } from './modules/home/home.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +22,8 @@ import { HomeComponent } from './modules/home/home.component';
     UsersModule,
     FormsModule,
     ReactiveFormsModule,
-    BarModule
+    BarModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -9,6 +9,14 @@ export class TasksService {
 
   constructor(private readonly httpClient: HttpClient) { }
 
+  postTask(task: any){
+    return this.httpClient.post('http://localhost:3000/task', task,{
+      headers:{
+        Authorization:`Bearer ${localStorage.getItem('access_token')}`
+      },
+    })
+  }
+
   getTasks(){
     return this.httpClient.get<any>('http://localhost:3000/task',{
       headers:{
@@ -27,11 +35,21 @@ export class TasksService {
   }
 
   getDeleteTask(id: string):Observable<any>{
-    return this.httpClient.delete<any>(`http://localhost:3000/task/${id}`)
+    return this.httpClient.delete<any>(`http://localhost:3000/task/${id}`,{
+      headers:{
+        Authorization:`Bearer ${localStorage.getItem('access_token')}`
+      },
+    },
+    )
   }
 
   getUpdateTask(id: string, updatedTask: any){
-    return this.httpClient.patch(`http://localhost:3000/task/${id}`, updatedTask)
+    return this.httpClient.patch(`http://localhost:3000/task/${id}`, updatedTask,{
+      headers:{
+        Authorization:`Bearer ${localStorage.getItem('access_token')}`
+      },
+    },
+    )
   }
 
 }

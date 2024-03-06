@@ -1,1 +1,12 @@
-<p>home works!</p>
+<div class="container-fluid">
+    <div class="container">
+      <form class="row g-3" [formGroup]="createNewTask"  (ngSubmit)="postTask(task)">
+        <h4>Añadir tarea nueva</h4>
+        <div class="col-auto">
+          <label for="nameinput" class="col-sm-2 col-form-label">Nombre</label>
+          <input class="form-control" formControlName="name">
+        </div>
+        <button type="submit" class="btn btn-primary">Agregar tarea</button>
+      </form> 
+    </div>
+  </div>
