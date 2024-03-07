@@ -3,8 +3,6 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import {UsersService} from '../../services/users.service'
 import { Router } from '@angular/router'; 
 import Swal from 'sweetalert2';
-//investigar peticiones con id 
-//listar tasks y por id
 
 @Component({
   selector: 'app-users',
@@ -35,11 +33,12 @@ export class UsersComponent {
     
     });
   }
+
   private(){
     this.usersService.private().subscribe((response => {
       console.log(response);
     }))
   }
-
+  
 }
 
