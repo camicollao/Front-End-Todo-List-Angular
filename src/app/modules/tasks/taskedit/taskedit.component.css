@@ -7,11 +7,11 @@ form{
     width: 30%;
     padding: 50px;
     border-radius: 10px;
-    background-color:#fff; 
+    background-color:#5b385e; 
 }
 .container-fluid{
-    background-color: #A5D7E8;
-    width:90%; 
+    background-color: #dee6ed;
+    width:100%; 
     margin:auto;
     padding-bottom: 1000px;
 }

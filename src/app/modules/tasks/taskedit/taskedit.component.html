@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <div class="container">
-    <form class="row g-3" [formGroup]="formulario2"  (ngSubmit)="saveTask(task.id)">
+    <form class="row g-3 text-white" [formGroup]="formulario2"  (ngSubmit)="saveTask(task.id)">
       <h4>Editar tarea</h4>
       <div class="col-auto">
         <label for="nameinput" class="col-sm-2 col-form-label">Nombre</label>
@@ -10,7 +10,7 @@
         <label for="statusinput" class="form-label">Estado</label>
         <input class="form-control" value="{{task.done}}" formControlName="done">
       </div>
-      <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+      <button type="submit" class="btn btn-warning">Guardar Cambios</button>
     </form> 
   </div>
 </div>

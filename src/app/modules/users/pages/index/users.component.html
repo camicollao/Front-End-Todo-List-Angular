@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+    <form [formGroup]="formulario" (ngSubmit)="onSubmit()" class="text-white">
         <h4>Iniciar sesion</h4>
         <div class="mb-3">
             <label>Email</label>
@@ -9,6 +9,6 @@
             <label>Password</label>
             <input type="password" class="form-control" formControlName="password">
         </div>
-        <input type="submit" value="Enviar" class="btn btn-info">
+        <input type="submit" value="Enviar" class="btn btn-warning">
     </form>
 </div>
