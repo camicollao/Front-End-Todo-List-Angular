@@ -1,0 +1,12 @@
+<div class="container-fluid">
+    <div class="container">
+      <form class="row g-3 text-white" [formGroup]="createNewTask"  (ngSubmit)="postTask(task)">
+        <h4>Añadir una nueva tarea</h4>
+        <div class="col-auto">
+          <label for="nameinput" class="col-form-label">Ingresa una tarea</label>
+          <input class="form-control" formControlName="name">
+        </div>
+        <button type="submit" class="btn btn-warning">Agregar</button>
+      </form> 
+    </div>
+  </div>
