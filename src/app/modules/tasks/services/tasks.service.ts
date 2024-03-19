@@ -9,6 +9,14 @@ export class TasksService {
 
   constructor(private readonly httpClient: HttpClient) { }
 
+  postTask(task: any){
+    return this.httpClient.post('http://localhost:3000/task', task,{
+      headers:{
+        Authorization:`Bearer ${localStorage.getItem('access_token')}`
+      },
+    })
+  }
+
   getTasks(){
     return this.httpClient.get<any>('http://localhost:3000/task',{
       headers:{

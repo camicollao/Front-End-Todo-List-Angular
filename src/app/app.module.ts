@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { TasksModule } from './modules/tasks/tasks.module';
 import { UsersModule } from './modules/users/users.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HomeModule } from './modules/home/home.module';
+import { BarModule } from './modules/bar/bar.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     TasksModule,
     UsersModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HomeModule,
+    BarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
