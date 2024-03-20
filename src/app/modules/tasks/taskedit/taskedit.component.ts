@@ -36,7 +36,7 @@ export class TaskeditComponent {
   saveTask(taskId: string){
     const {name, done} = this.formulario2.value
     console.log(done, typeof done)
-    this.tasksService.getUpdateTask(taskId,{name, done: typeof done === "string" && done === 'true' ? true : false}).subscribe(() => {
+    this.tasksService.getUpdateTask(taskId,{name, done: typeof done === "string" && done === 'true' || done === true ? true : false}).subscribe(() => {
       this.router.navigate(['tasks'])
     })
   }

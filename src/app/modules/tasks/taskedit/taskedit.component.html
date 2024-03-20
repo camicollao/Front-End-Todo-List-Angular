@@ -7,8 +7,8 @@
         <input class="form-control" value="{{task.name}}" formControlName="name">
       </div>
       <div class="col-auto">
-        <label for="statusinput" class="form-label">Estado</label>
-        <input class="form-control" value="{{task.done}}" formControlName="done">
+        <input class="form-check-input mt-1" type="checkbox" value="{{task.done}}" formControlName="done">
+        <label for="statusinput" class="form-label">Pendiente por hacer</label>
       </div>
       <button type="submit" class="btn btn-warning">Guardar Cambios</button>
     </form> 

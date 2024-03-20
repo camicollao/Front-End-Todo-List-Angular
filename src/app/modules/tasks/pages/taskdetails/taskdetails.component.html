@@ -9,8 +9,12 @@
                 </tr>
                 <tr>
                   <th scope="row">Estado</th>
-                  <td>{{task.done}}</td>
-                </tr>
+                  @if (task.done == true) {
+                    <td [ngClass]="task.done ? 'text-success' : 'text-danger' ">En Proceso</td>
+                }@else {
+                    <td [ngClass]="task.done ? 'text-success' : 'text-danger' ">Terminado</td>
+                }                  
+              </tr>
                 <tr>
                   <th scope="row">Creado</th>
                   <td>{{task.created_at}}</td>
