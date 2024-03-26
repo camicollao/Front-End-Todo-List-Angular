@@ -1,6 +1,7 @@
-h5{
+h4{
     text-align: center;
     margin: auto;
+    padding: 10px;
 }
 .container-fluid{
     background-color: #dee6ed;
@@ -12,6 +13,7 @@ h5{
 .container{
     width: 80%;
     margin: auto;
+    padding-top: 50px;
 }
 .table{
     width: 100%;
@@ -19,4 +21,11 @@ h5{
     padding: 20px;
     border-radius: 10px;
     background-color: #dee6ed;
+}
+form{
+    margin: auto;
+    width: 30%;
+    padding: 50px;
+    border-radius: 10px;
+    background-color:#5b385e; 
 }

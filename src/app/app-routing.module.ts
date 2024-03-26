@@ -9,7 +9,7 @@ const routes: Routes = [{
   canActivate:[loginGuard]
 },{
   'path': 'users',
-  loadChildren: () => import('./modules/users/users.module').then(m => m.UsersModule)
+  loadChildren: () => import('./modules/users/users.module').then(m => m.UsersModule),
 },{
   'path': '',
   component: HomeComponent

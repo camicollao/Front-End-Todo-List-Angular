@@ -4,17 +4,18 @@ import { UsersComponent } from './pages/index/users.component';
 import { UsersRoutingModule } from './users-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
-    UsersComponent
-  ],
+    UsersComponent,
+    LoginComponent  ],
   imports: [
     CommonModule,
     UsersRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
 
   ],
   exports: [

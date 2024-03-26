@@ -6,7 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ButtondetailsComponent } from './components/buttondetails/buttondetails.component';
 import { TaskdetailsComponent } from './pages/taskdetails/taskdetails.component';
-import { TaskeditComponent } from './taskedit/taskedit.component';
+import { TaskeditComponent } from './pages/taskedit/taskedit.component';
 
 
 @NgModule({
