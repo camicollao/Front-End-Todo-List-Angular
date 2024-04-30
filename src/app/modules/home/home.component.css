@@ -1,6 +1,7 @@
 h4{
     text-align: center;
     margin: auto;
+    padding-top: 50px;
 }
 form{
     margin: auto;
@@ -16,5 +17,5 @@ form{
     padding-bottom: 1000px;
 }
 .container{
-    padding-top: 100px;
+    padding-top: 50px;
 }

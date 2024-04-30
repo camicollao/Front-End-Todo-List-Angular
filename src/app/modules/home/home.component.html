@@ -1,14 +1,20 @@
 <div class="container-fluid">
-    <div class="container">
-      <form class="row g-3 text-white" [formGroup]="createNewTask"  (ngSubmit)="postTask(task)">
-        <h4>Crear una cuenta</h4>
-        <div class="col-auto">
-          <label for="nameinput" class="col-form-label">Ingrese un correo electronico</label>
-          <input class="form-control" formControlName="email">
-          <label for="nameinput" class="col-form-label">Ingrese una contraseña</label>
-          <input class="form-control" formControlName="password">
-        </div>
-        <button type="submit" class="btn btn-warning">Crear</button>
-      </form> 
-    </div>
+  <h4>Para utilizar Tasks, debes primero crear una cuenta</h4>
+  <div class="container">
+    <form class="row g-3 text-white" [formGroup]="createNewUser"  (ngSubmit)="postUser(user)">
+      <div class="col-auto">
+        <label class="col-form-label">Nombre</label>
+        <input class="form-control" formControlName="name" type="text" required/>
+      </div>
+      <div class="col-auto">
+        <label class="col-form-label">Correo electronico</label>
+        <input class="form-control" formControlName="email"  type="email" required/>
+      </div>
+      <div class="col-auto">
+        <label class="col-form-label">Contraseña</label>
+        <input class="form-control" type="password" formControlName="password" required/>
+      </div>
+      <input type="submit" class="btn btn-warning" value="Crear cuenta">
+    </form> 
   </div>
+</div>

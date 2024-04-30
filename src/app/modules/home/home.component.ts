@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { TasksService } from '../tasks/services/tasks.service';
+import { Router } from '@angular/router';
+import { HomeService } from '../home/home.service';
 import Swal from 'sweetalert2';
-import { FormControl, FormGroup } from '@angular/forms';
-
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -12,37 +11,43 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class HomeComponent implements OnInit{
 
-  createNewTask: FormGroup;
-  tasks: any[] = [];
-  task: any;
+  createNewUser: FormGroup;
+  users: any[] = [];
+  user: any;
 
-  constructor(private readonly tasksService: TasksService, private readonly router: Router){
-    this.createNewTask = new FormGroup({
-      name: new FormControl('')
+  constructor(private readonly homeService: HomeService, private readonly router: Router){
+    this.createNewUser = new FormGroup({
+      name: new FormControl(''),
+      email: new FormControl(''),
+      password: new FormControl(''),
     })
   }
 
   ngOnInit(): void {
-    this.tasksService.getTasks().subscribe((tasks) => {
-      this.tasks = tasks;
+    this.homeService.getUsers().subscribe((users) => {
+      this.users = users;
     })
   }
 
 
-  postTask(task: string){
-    const {name} = this.createNewTask.value
+  postUser(user: any){
+    const {name} = this.createNewUser.value
     console.log(name)
-    this.tasksService.postTask({name, done: true}).subscribe(() => {
-      this.tasksService.getTasks().subscribe((tasks) =>{
-        this.tasks = tasks
+    const {email} = this.createNewUser.value
+    console.log(email)
+    const {password} = this.createNewUser.value
+    console.log(password)
+    this.homeService.postUser({name, email, password}).subscribe(() => {
+      this.homeService.getUsers().subscribe((users) =>{
+        this.users = users
       })
       Swal.fire({
         icon: "success",
-        title: "La tarea ha sido guardada correctamente",
+        title: "Cuenta creada",
         showConfirmButton: false,
         timer: 1500
       });
-      this.router.navigate([`tasks`])
+      this.router.navigate([`users`])
       });
     }
 
